@@ -59,7 +59,7 @@ Vist http://localhost:3000 on your browser
 
 ## Performance
 
-Rig：14700k@4.8Ghz with HT off，32GB DDR4@3866Mhz；Tool uses uo to 8 workers
+Rig：14700k@4.8Ghz with HT off，32GB DDR4@3866Mhz；Tool uses up to 8 workers
 
 - Approx 100MB mem used when no images are loaded
 - Loading 2225 images (6.2GB total). It takes around 10s to create all thumbnails; P-core fully used, E-core has less than half utilisation. Mem usage went to around 400MB
