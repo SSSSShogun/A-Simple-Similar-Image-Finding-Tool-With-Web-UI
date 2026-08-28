@@ -62,8 +62,8 @@ Vist http://localhost:3000 on your browser
 Rig：14700k@4.8Ghz with HT off，32GB DDR4@3866Mhz；Tool uses uo to 8 workers
 
 - Approx 100MB mem used when no images are loaded
-- Loading 2225 images (6.2GB total) . It takes around 10s to create all thumbnails; P-core fully used, E-core has less than half utilisation
-- Calculating similarity with 128 sampling sise (max) takes around 40s, core utilisation is similar to above
+- Loading 2225 images (6.2GB total). It takes around 10s to create all thumbnails; P-core fully used, E-core has less than half utilisation. Mem usage went to around 400MB
+- Calculating similarity with 128 sampling sise (max) takes around 40s, core utilisation is similar to above. Mem usage slightly increased
 
 BTW: The default power setting MIGHT make wokers run on E-core (AMD YES!), changing power setting or bringing the terminal to front would address it.
 
