@@ -1,0 +1,140 @@
+@use 'variables' as *;
+
+.panel-input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 40vh;
+  min-height: 260px;
+  border-bottom: 1px solid $color-border;
+  background: $color-bg;
+}
+
+.panel-input__toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-bottom: 1px solid $color-border;
+  background: $color-surface;
+  flex-shrink: 0;
+}
+
+.panel-input__title {
+  margin-right: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: $color-text;
+}
+
+.panel-input__lng {
+  font-size: 13px;
+  color: $color-text-muted;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+
+  &:hover{
+    color: $color-text;
+  background-color: rgba(0, 0, 0, 0.04);
+  border-color: rgba(0, 0, 0, 0.1);
+  }
+
+  &:active{
+    transform: scale(0.95);
+  background-color: rgba(0, 0, 0, 0.08);
+  }
+}
+
+.panel-input__count {
+  margin-left: auto;
+  font-size: 13px;
+  color: $color-text-muted;
+}
+
+.panel-input__grid {
+  flex: 1;
+  height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.panel-input__inner {
+  position: relative;
+  width: 100%;
+}
+
+.panel-input__row {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: $thumb-gap;
+}
+
+.thumb {
+  position: relative;
+  width: $thumb-size;
+  height: $thumb-size;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid $color-border;
+  background: $color-surface-2;
+  cursor: default;
+  will-change: transform;
+  transition: transform $transition-fast;
+
+  &:hover {
+    transform: scale(1.12);
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__name {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 3px 6px;
+    font-size: 11px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.55);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    opacity: 0;
+    transition: opacity $transition-fast;
+
+    .thumb:hover & {
+      opacity: 1;
+    }
+  }
+}
+
+.panel-input__empty {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-hint {
+  color: $color-text-muted;
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.8;
+
+  strong {
+    color: $color-accent;
+    font-weight: 600;
+  }
+}

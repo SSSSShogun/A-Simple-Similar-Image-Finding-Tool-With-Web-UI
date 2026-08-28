@@ -1,0 +1,43 @@
+{
+  "name": "image-similarity",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A simple similar image finding tool with web ui",
+  "scripts": {
+    "dev": "vite",
+    "start": "node server/index.js",
+    "build": "vite build",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "dp": "dprint fmt"
+  },
+  "author": "SSSSShogun",
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^9.3.1",
+    "@mui/material": "^9.3.1",
+    "@tanstack/react-virtual": "^3.14.9",
+    "dotenv": "^17.4.2",
+    "dprint": "^0.56.0",
+    "express": "^5.2.1",
+    "i18next": "^26.4.0",
+    "i18next-browser-languagedetector": "^8.2.1",
+    "jszip": "^3.10.1",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-i18next": "^17.0.12",
+    "react-router-dom": "^7.18.2",
+    "sass": "^1.102.0",
+    "sharp": "^0.35.3",
+    "trash": "^10.1.1"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.4",
+    "oxlint": "^1.75.0",
+    "vite": "^8.2.0"
+  }
+}

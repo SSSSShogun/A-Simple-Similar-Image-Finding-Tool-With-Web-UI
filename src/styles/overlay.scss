@@ -1,0 +1,117 @@
+@use 'variables' as *;
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: rgba(10, 12, 16, 0.88);
+
+  &__image {
+    object-fit: contain;
+    will-change: transform;
+  }
+}
+
+.overlay .overlay__arrow {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.35);
+  transition: background $transition-fast, opacity $transition-fast;
+
+  &:hover:not(.Mui-disabled) {
+    background: rgba(0, 0, 0, 0.55);
+  }
+
+  &.is-disabled {
+    opacity: 0.25;
+  }
+
+  & .MuiSvgIcon-root {
+    font-size: 3rem;
+  }
+
+  &--left {
+    left: 18px;
+  }
+
+  &--right {
+    right: 18px;
+  }
+}
+
+.overlay-thumbs {
+  position: fixed;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 11;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.55);
+
+  &__bar {
+    display: flex;
+    gap: 8px;
+    width: calc(5 * 64px + 4 * 8px);
+    overflow-x: auto;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__thumb {
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+    object-fit: cover;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all $transition-fast;
+
+    &:hover {
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    &.overlay-thumb--active {
+      border-color: $color-check;
+      transform: scale(1.08);
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 56px;
+    flex-shrink: 0;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.4);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background $transition-fast, opacity $transition-fast;
+
+    &:hover:not(:disabled) {
+      background: rgba(0, 0, 0, 0.65);
+    }
+
+    &:disabled {
+      opacity: 0.25;
+      cursor: default;
+    }
+  }
+}

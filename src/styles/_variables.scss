@@ -1,0 +1,21 @@
+$color-bg:         #0f1115;
+$color-surface:    #1a1d24;
+$color-surface-2:  #22262f;
+$color-border:     #2e333d;
+$color-text:       #e6e8ec;
+$color-text-muted: #9aa3af;
+$color-accent:     #4f8cff;
+$color-accent-soft: rgba(79, 140, 255, 0.18);
+$color-danger:     #ff5c6c;
+$color-check:      #4f8cff;
+
+$thumb-size: 96px;
+$thumb-gap: 10px;
+$preview-size: 200px;
+$group-max-w: 1200px;
+
+$transition-fast: 160ms ease;
+$transition-slow: 280ms cubic-bezier(0.22, 1, 0.36, 1);
+
+$font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui,
+  -apple-system, Roboto, 'Helvetica Neue', Arial, sans-serif;
