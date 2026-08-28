@@ -22,7 +22,7 @@ An easy-to-use similar image finder with web UI
 ### To run
 
 ```
-git clone https://github.com/SSSSShogun/A-simple-image-similarity-compare-script-with-web-UI.git
+git clone https://github.com/SSSSShogun/A-Simple-Similar-Image-Finding-Tool-With-Web-UI.git
 
 cd image-similarity
 
