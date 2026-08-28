@@ -1,0 +1,23 @@
+{
+  "typescript": {
+    "semiColons": "asi",
+    "indentWidth": 2,
+    "lineWidth": 100,
+    "quoteStyle": "alwaysDouble",
+    "trailingCommas": "never"
+  },
+  "json": {
+  },
+  "markdown": {
+  },
+  "excludes": [
+    "**/node_modules",
+    "**/*-lock.json",
+    "**/dist"
+  ],
+  "plugins": [
+    "npm:@dprint/typescript@0.96.1",
+    "npm:@dprint/json@0.23.0",
+    "npm:@dprint/markdown@0.22.1"
+  ]
+}

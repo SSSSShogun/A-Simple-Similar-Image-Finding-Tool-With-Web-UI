@@ -1,0 +1,48 @@
+@use 'variables' as *;
+
+.autoselect-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 12, 16, 0.82);
+  backdrop-filter: blur(3px);
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    min-width: 300px;
+    padding: 34px 40px;
+    border-radius: 14px;
+    background: $color-surface;
+    border: 1px solid $color-border;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+
+  &__text {
+    font-size: 16px;
+    font-weight: 600;
+    color: $color-text;
+  }
+
+  &__count {
+    font-size: 14px;
+    color: $color-accent;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.autoselect-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border: 1px solid $color-border;
+  border-radius: 10px;
+  background: $color-surface-2;
+}
